@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 
 export default function WhatsAppButton() {
-  const whatsappNumber = '5598981111111' // Replace with your actual WhatsApp number
+  const whatsappNumber = '5598984924264' // Replace with your actual WhatsApp number
   const whatsappUrl = `https://wa.me/${whatsappNumber}`
 
   return (
