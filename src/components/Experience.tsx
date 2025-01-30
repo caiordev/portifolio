@@ -14,7 +14,7 @@ export default function Experience() {
       degree: 'Bacharelado Interdisciplinar em Ciência e Tecnologia',
       institution: 'Universidade Federal do Maranhão',
       period: '2020 - 2023',
-      description: 'Especialização em tecnologias web modernas e desenvolvimento full-stack.',
+      description: 'Foco na criação de soluções tecnologicas e uso de técnicas da engenharia.',
     },
   ]
 
@@ -25,9 +25,9 @@ export default function Experience() {
       period: '2024 - Presente',
       responsibilities: [
         'Desenvolvimento de aplicações web escaláveis',
-        'Liderança técnica de equipe com 5 desenvolvedores',
-        'Implementação de CI/CD e práticas ágeis',
-        'Otimização de performance e segurança',
+        'Criação e suporte a APIs REST usando Spring Boot (Spring MVC, JPA, JWT, OAuth2) e banco de dados PostgreSQL',
+        'Desenvolvimento de microsserviços com a stack Spring, envolvendo API Gateway, Netflix Eureka, Open Feign, RabbitMQ, GitLab CI e Docker',
+        'Trabalho com o frontend utilizando Vue.js 3.x, Bootstrap e HTML/CSS',
       ],
     },
     {
@@ -35,10 +35,21 @@ export default function Experience() {
       company: 'Inforgeneses',
       period: '2023 - 2024',
       responsibilities: [
-        'Desenvolvimento de interfaces responsivas',
-        'Implementação de designs em React e Next.js',
-        'Otimização de SEO e performance',
-        'Integração com APIs RESTful',
+        'Manutenção de sistemas acadêmicos e financeiros',
+        'Análise e criação de novas funcionalidades e integração com API’s externas',
+        'Otimização de consultas',
+        'integração com Itaú, caixa, pagedu e sistemas de NFSE',
+      ],
+    },
+    {
+      role: 'Desenvolvedor Full-Stack',
+      company: 'DPIT',
+      period: '2023 - 2023',
+      responsibilities: [
+        'Levantamento de requisitos',
+        'Reunião de usuários',
+        'Desenvolvimento de banco de dados',
+        'Desenvolvimento de Front e Back',
       ],
     },
   ]

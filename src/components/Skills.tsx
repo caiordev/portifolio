@@ -1,19 +1,65 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { FaReact, FaNode, FaJava, FaAws } from 'react-icons/fa'
+import { SiTypescript, SiNextdotjs, SiTailwindcss, SiSpringboot, SiPhp, SiPostgresql, SiFirebase } from 'react-icons/si'
 
 const skills = [
-  'React',
-  'TypeScript',
-  'Node.js',
-  'Next.js',
-  'Tailwind CSS',
-  'Java',
-  'SpringBoot',
-  'PHP',
-  'PostgreSQL',
-  'Firebase',
-  'AWS'
+  {
+    name: 'React',
+    icon: FaReact,
+    color: '#61DAFB'
+  },
+  {
+    name: 'TypeScript',
+    icon: SiTypescript,
+    color: '#3178C6'
+  },
+  {
+    name: 'Node.js',
+    icon: FaNode,
+    color: '#339933'
+  },
+  {
+    name: 'Next.js',
+    icon: SiNextdotjs,
+    color: '#000000'
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: SiTailwindcss,
+    color: '#06B6D4'
+  },
+  {
+    name: 'Java',
+    icon: FaJava,
+    color: '#007396'
+  },
+  {
+    name: 'SpringBoot',
+    icon: SiSpringboot,
+    color: '#6DB33F'
+  },
+  {
+    name: 'PHP',
+    icon: SiPhp,
+    color: '#777BB4'
+  },
+  {
+    name: 'PostgreSQL',
+    icon: SiPostgresql,
+    color: '#336791'
+  },
+  {
+    name: 'Firebase',
+    icon: SiFirebase,
+    color: '#FFCA28'
+  },
+  {
+    name: 'AWS',
+    icon: FaAws,
+    color: '#FF9900'
+  }
 ]
 
 const container = {
@@ -69,7 +115,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="section-title"
+          className="section-title text-center mb-12"
         >
           Minhas Habilidades
         </motion.h2>
@@ -78,21 +124,31 @@ export default function Skills() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-4xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto"
         >
           {skills.map((skill) => (
             <motion.div
-              key={skill}
+              key={skill.name}
               variants={item}
-              whileHover={{ scale: 1.05 }}
-              className="gradient-border"
+              whileHover={{ 
+                scale: 1.05,
+                transition: { duration: 0.2 }
+              }}
+              className="relative group"
             >
-              <div className="card group backdrop-blur-lg">
-                <div className="relative z-10">
-                  <h3 className="text-lg font-semibold text-center bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-blue-300 bg-clip-text text-transparent group-hover:from-blue-400 group-hover:to-blue-600 transition-all duration-300">
-                    {skill}
-                  </h3>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl opacity-50 group-hover:opacity-70 blur transition-all duration-300" />
+              <div className="relative bg-white dark:bg-gray-800 rounded-xl p-6 flex flex-col items-center space-y-3 shadow-lg backdrop-blur-sm">
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  style={{ color: skill.color }}
+                  className="text-4xl"
+                >
+                  <skill.icon />
+                </motion.div>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                  {skill.name}
+                </h3>
               </div>
             </motion.div>
           ))}
