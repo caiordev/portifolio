@@ -1,7 +1,8 @@
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import type { Metadata } from 'next'
 import './globals.css'
 import SocialButtons from '@/components/SocialButtons'
+import { ClientLayout } from '@/components/ClientLayout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,10 +17,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>
-        {children}
-        <SocialButtons />
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className={`${inter.className} transition-colors`}>
+        <ClientLayout>
+          {children}
+          <SocialButtons />
+        </ClientLayout>
       </body>
     </html>
   )

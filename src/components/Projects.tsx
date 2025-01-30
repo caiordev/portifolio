@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 
-const projects = [
+const frontendProjects = [
   {
     title: 'Sistema de venda de viagens',
     description: 'Sistema de venda de viagens, com sistema de login, carrinho de compras e gerenciamento de pedidos.',
@@ -28,6 +28,30 @@ const projects = [
   }
 ]
 
+const backendProjects = [
+  {
+    title: 'API de Gerenciamento de Tarefas',
+    description: 'API RESTful para gerenciamento de tarefas com autenticação JWT, documentação Swagger e testes automatizados.',
+    image: '/portifolio/api.png',
+    link: 'https://github.com/seu-usuario/api-tasks',
+    tech: ['Node.js', 'Express', 'MongoDB', 'Jest'],
+  },
+  {
+    title: 'Microsserviço de Notificações',
+    description: 'Microsserviço para envio de notificações via email e SMS, utilizando filas com RabbitMQ.',
+    image: '/portifolio/notification.png',
+    link: 'https://github.com/seu-usuario/notification-service',
+    tech: ['Node.js', 'RabbitMQ', 'Redis', 'Docker'],
+  },
+  {
+    title: 'API de E-commerce',
+    description: 'API completa para e-commerce com sistema de pagamentos, gestão de pedidos e integração com gateway de pagamento.',
+    image: '/portifolio/ecommerce.png',
+    link: 'https://github.com/seu-usuario/ecommerce-api',
+    tech: ['Node.js', 'PostgreSQL', 'Stripe', 'TypeScript'],
+  }
+]
+
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -45,10 +69,10 @@ const item = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-20 overflow-hidden">
+    <section id="projects" className="relative py-20 overflow-hidden bg-gray-50 dark:bg-gray-900">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800" />
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
@@ -59,7 +83,7 @@ export default function Projects() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-400/30 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-400/20 dark:bg-blue-500/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -71,7 +95,7 @@ export default function Projects() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-600/20 dark:bg-blue-600/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -80,7 +104,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-4 text-gray-800 dark:text-white"
+          className="text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white"
         >
           Meus Projetos
         </motion.h2>
@@ -94,64 +118,144 @@ export default function Projects() {
           Aqui estão alguns dos projetos que desenvolvi, demonstrando minhas habilidades e experiência em diferentes tecnologias.
         </motion.p>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              variants={item}
-              className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-xs font-medium px-2.5 py-1 rounded-full"
+        {/* Frontend Projects */}
+        <div className="mb-16">
+          <motion.h3
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white"
+          >
+            Projetos Frontend
+          </motion.h3>
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {frontendProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                variants={item}
+                className="group relative bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700/50"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-xs font-medium px-2.5 py-1 rounded-full border border-blue-100 dark:border-blue-800"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <a
+                      href={project.link}
+                      className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      {tech}
-                    </span>
-                  ))}
+                      <span>Ver Projeto</span>
+                      <FaExternalLinkAlt className="text-sm" />
+                    </a>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <a
-                    href={project.link}
-                    className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>Ver Projeto</span>
-                    <FaExternalLinkAlt className="text-sm" />
-                  </a>
-                </div>
-              </div>
 
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-600/0 to-blue-600/0 group-hover:to-blue-600/10 pointer-events-none transition-all duration-300" />
-            </motion.div>
-          ))}
-        </motion.div>
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-600/0 to-blue-600/0 group-hover:to-blue-600/10 pointer-events-none transition-all duration-300" />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Backend Projects */}
+        <div>
+          <motion.h3
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white"
+          >
+            Projetos Backend
+          </motion.h3>
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {backendProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                variants={item}
+                className="group relative bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700/50"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 text-xs font-medium px-2.5 py-1 rounded-full border border-blue-100 dark:border-blue-800"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <a
+                      href={project.link}
+                      className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Ver Projeto</span>
+                      <FaGithub className="text-sm" />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-600/0 to-blue-600/0 group-hover:to-blue-600/10 pointer-events-none transition-all duration-300" />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   )
