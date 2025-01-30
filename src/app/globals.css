@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #1E40AF;
+  --secondary-blue: #3B82F6;
+  --light-blue: #DBEAFE;
+  --dark-blue: #1E3A8A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
+  color: #1E293B;
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(59, 130, 246, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(29, 78, 216, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(37, 99, 235, 0.1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.dark body {
+  background: linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%);
+  color: #F8FAFC;
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(29, 78, 216, 0.2) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(37, 99, 235, 0.2) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(59, 130, 246, 0.2) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.glass-card {
+  @apply backdrop-blur-lg bg-white/30 dark:bg-gray-900/30 border border-white/20 dark:border-gray-700/30;
+}
+
+.glass-effect {
+  @apply backdrop-blur-md bg-white/10 dark:bg-gray-900/10;
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(to right, #3B82F6, #2563EB);
+  padding: 1px;
+  border-radius: 0.5rem;
+}
+
+.gradient-border > * {
+  background: white;
+  border-radius: inherit;
+}
+
+.dark .gradient-border > * {
+  background: #1E293B;
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden bg-blue-600 text-white px-8 py-3 rounded-lg 
+    hover:bg-blue-700 transition-all duration-300 
+    before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent 
+    before:via-white/10 before:to-transparent before:-translate-x-full hover:before:translate-x-full 
+    before:transition-transform before:duration-700;
+  }
+  
+  .btn-secondary {
+    @apply relative overflow-hidden bg-blue-100 text-blue-800 px-8 py-3 rounded-lg 
+    hover:bg-blue-200 transition-all duration-300 dark:bg-blue-900 dark:text-blue-100 
+    dark:hover:bg-blue-800 before:absolute before:inset-0 before:bg-gradient-to-r 
+    before:from-transparent before:via-white/10 before:to-transparent before:-translate-x-full 
+    hover:before:translate-x-full before:transition-transform before:duration-700;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-blue-800 
+    dark:from-blue-400 dark:to-blue-600 bg-clip-text text-transparent;
+  }
+
+  .card {
+    @apply glass-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-all 
+    hover:scale-[1.02] relative overflow-hidden;
+  }
+
+  .card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent 
+    opacity-0 transition-opacity duration-300;
+  }
+
+  .card:hover::before {
+    @apply opacity-100;
+  }
+}
