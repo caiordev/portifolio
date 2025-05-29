@@ -25,30 +25,30 @@ const frontendProjects = [
     image: '/portifolio/levada.png',
     link: 'http://levadaturismo.com/',
     tech: ['Python', 'Django', 'PostgreSQL'],
+  },
+  {
+    title: 'Projeto de Bíblia',
+    description: 'Probjeto de bíblia, com consumo de api de liturgia. O sistema tem audio leitura.',
+    image: '/portifolio/biblia.png',
+    link: 'https://caiordev.github.io/projeto_biblia/',
+    tech: ['Python', 'Django', 'PostgreSQL'],
+  },
+  {
+    title: 'Projeto de DevDocs',
+    description: 'Projeto para reunir informações de documentação e aprendizados e reunir os projetos do github utilzando a API deles.',
+    image: '/portifolio/devdocs.png',
+    link: 'https://dev-docs-orcin.vercel.app',
+    tech: ['Vue', 'Node.js', 'Firebase'],
   }
 ]
 
 const backendProjects = [
   {
-    title: 'API de Gerenciamento de Tarefas',
-    description: 'API RESTful para gerenciamento de tarefas com autenticação JWT, documentação Swagger e testes automatizados.',
-    image: '/portifolio/api.png',
-    link: 'https://github.com/seu-usuario/api-tasks',
-    tech: ['Node.js', 'Express', 'MongoDB', 'Jest'],
-  },
-  {
-    title: 'Microsserviço de Notificações',
-    description: 'Microsserviço para envio de notificações via email e SMS, utilizando filas com RabbitMQ.',
-    image: '/portifolio/notification.png',
-    link: 'https://github.com/seu-usuario/notification-service',
-    tech: ['Node.js', 'RabbitMQ', 'Redis', 'Docker'],
-  },
-  {
-    title: 'API de E-commerce',
-    description: 'API completa para e-commerce com sistema de pagamentos, gestão de pedidos e integração com gateway de pagamento.',
-    image: '/portifolio/ecommerce.png',
-    link: 'https://github.com/seu-usuario/ecommerce-api',
-    tech: ['Node.js', 'PostgreSQL', 'Stripe', 'TypeScript'],
+    title: 'Geração de QRCode com salvamento no S3 da AWS',
+    description: 'Projeto para geração de QRCode com salvamento no S3 da AWS.',
+    image: '/portifolio/qrcode.png',
+    link: 'sem link',
+    tech: ['Java', 'Spring Boot', 'AWS S3'],
   }
 ]
 
