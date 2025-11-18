@@ -62,9 +62,9 @@ const Hero = () => {
                 {t('hero.contact')}
               </a>
               <a
-                href="public/CAIOREIS.pdf"
+                href="CAIOREIS.pdf"
                 download
-                className="px-8 py-4 border border-slate-700 text-slate-300 rounded-lg font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300 flex items-center gap-2"
+                className="px-12 py-4 border border-slate-700 text-slate-300 rounded-lg font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300 flex items-center gap-2"
               >
                 <Download size={20} />
                 {t('hero.downloadCV')}

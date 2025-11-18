@@ -10,15 +10,15 @@ const About = () => {
   // Array de imagens para o carrossel
   const carouselImages = [
     {
-      url: 'public/WhatsApp Image 2025-10-20 at 13.05.25.jpeg',
+      url: 'WhatsApp Image 2025-10-20 at 13.05.25.jpeg',
       alt: 'Workspace com código',
     },
     {
-      url: 'public/WhatsApp Image 2025-10-20 at 13.05.26 (1).jpeg',
+      url: 'WhatsApp Image 2025-10-20 at 13.05.26 (1).jpeg',
       alt: 'Desenvolvimento de software',
     },
     {
-      url: 'public/WhatsApp Image 2025-10-20 at 13.05.26.jpeg',
+      url: 'WhatsApp Image 2025-10-20 at 13.05.26.jpeg',
       alt: 'Programação em equipe',
     },
   ];
