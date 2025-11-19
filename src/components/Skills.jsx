@@ -27,22 +27,22 @@ const Skills = () => {
     {
       category: 'Backend',
       icon: <Database className="w-6 h-6" />,
-      skills: ['Node.js', 'Express', 'Java', 'Spring Boot', 'Python', 'PostgreSQL', 'MongoDB'],
+      skills: ['Java', 'Spring Boot', 'PostgreSQL', 'MongoDB'],
     },
     {
       category: 'DevOps & Cloud',
       icon: <Cloud className="w-6 h-6" />,
-      skills: ['Docker', 'AWS', 'CI/CD', 'Kubernetes', 'Linux', 'Nginx'],
+      skills: ['Docker', 'AWS', 'CI/CD', 'Linux', 'Nginx'],
     },
     {
       category: 'Ferramentas',
       icon: <GitBranch className="w-6 h-6" />,
-      skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'Figma'],
+      skills: ['Git', 'GitHub', 'VS Code', 'Postman'],
     },
     {
       category: 'Arquitetura',
       icon: <Layers className="w-6 h-6" />,
-      skills: ['Microserviços', 'REST API', 'GraphQL', 'Event-Driven', 'Clean Code'],
+      skills: ['Microserviços', 'REST API', 'Event-Driven', 'Clean Code'],
     },
   ];
 
