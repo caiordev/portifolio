@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Code2, Sparkles, Download, Github, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import FloatingTech from './FloatingTech';
+import TypingAnimation from './TypingAnimation';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -10,7 +12,8 @@ const Hero = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -top-48 -left-48 animate-float"></div>
-        <div className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style={{ animationDelay: '1s' }}></div>
+        <FloatingTech />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -35,7 +38,14 @@ const Hero = () => {
           >
             <span className="text-gradient glow">{t('hero.title1')}</span>
             <br />
-            <span className="text-white">{t('hero.title2')}</span>
+            <span className="text-white">
+              <TypingAnimation 
+                texts={['Full Stack Developer', 'Java Developer', 'React Developer', 'Problem Solver']}
+                typingSpeed={100}
+                deletingSpeed={50}
+                pauseDuration={2000}
+              />
+            </span>
           </motion.h1>
 
           <motion.p
@@ -56,7 +66,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 flex items-center gap-2"
               >
                 <Code2 size={20} />
                 {t('hero.contact')}

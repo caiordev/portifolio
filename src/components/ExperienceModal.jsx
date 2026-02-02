@@ -103,7 +103,7 @@ const ExperienceModal = ({ experience, isOpen, onClose }) => {
                 {experience.technologies && experience.technologies.length > 0 && (
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
-                      <Code size={20} className="text-purple-400" />
+                      <Code size={20} className="text-cyan-400" />
                       {t('experience.technologies')}
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -136,7 +136,7 @@ const ExperienceModal = ({ experience, isOpen, onClose }) => {
               <div className="sticky bottom-0 bg-slate-900/95 backdrop-blur-sm border-t border-slate-700 p-6">
                 <button
                   onClick={onClose}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
                 >
                   {t('experience.close')}
                 </button>

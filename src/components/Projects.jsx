@@ -34,7 +34,7 @@ const Projects = () => {
       date: '2025',
       team: 'Projeto Solo',
       status: 'Em Produção',
-      liveUrl: 'https://projeto-biblia.vercel.app/',
+      liveUrl: 'https://www.leiturabiblicahoje.com.br',
       githubUrl: '',
     },
     {
@@ -109,7 +109,7 @@ const Projects = () => {
                 onClick={() => setFilter(category.id)}
                 className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 ${
                   filter === category.id
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/30'
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white shadow-lg shadow-blue-500/30'
                     : 'bg-slate-800/50 border border-slate-700 text-slate-300 hover:border-blue-500/50 hover:text-blue-400'
                 }`}
               >

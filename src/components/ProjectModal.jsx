@@ -72,7 +72,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   )}
                   {project.team && (
                     <div className="flex items-center gap-2 text-slate-400">
-                      <Users size={18} className="text-purple-400" />
+                      <Users size={18} className="text-cyan-400" />
                       <span>{project.team}</span>
                     </div>
                   )}
@@ -152,7 +152,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <h3 className="text-xl font-semibold text-white mb-3">{t('projects.results')}</h3>
                     <div className="grid md:grid-cols-2 gap-3">
                       {project.results.map((result, index) => (
-                        <div key={index} className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-lg p-4">
+                        <div key={index} className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-lg p-4">
                           <p className="text-slate-300">{result}</p>
                         </div>
                       ))}
@@ -167,7 +167,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
+                      className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
                     >
                       <ExternalLink size={20} />
                       {t('projects.viewLive')}

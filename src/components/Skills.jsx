@@ -146,9 +146,9 @@ const Skills = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
+              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
             >
-              <div className="text-purple-400 mb-4">{skill.icon}</div>
+              <div className="text-cyan-400 mb-4">{skill.icon}</div>
               <h4 className="text-lg font-semibold mb-2">{skill.title}</h4>
               <p className="text-slate-400 text-sm">{skill.description}</p>
             </motion.div>

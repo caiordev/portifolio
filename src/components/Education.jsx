@@ -76,7 +76,7 @@ const Education = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-blue-500 to-purple-500"></div>
+          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-cyan-500 to-blue-500"></div>
 
           <div className="space-y-12">
             {education.map((edu, index) => (
@@ -89,21 +89,21 @@ const Education = () => {
                 className="relative"
               >
                 {/* Timeline Dot */}
-                <div className="hidden md:flex absolute left-8 -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-slate-900 z-10"></div>
+                <div className="hidden md:flex absolute left-8 -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-900 z-10"></div>
 
                 {/* Content Card */}
                 <div className="md:ml-20">
-                  <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 md:p-8 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+                  <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 md:p-8 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
                     {/* Header */}
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                       <div className="flex-1">
                         {/* Type Badge */}
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full text-sm text-purple-400 mb-3">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-sm text-blue-400 mb-3">
                           {getIcon(edu.type)}
                           <span>{getTypeLabel(edu.type)}</span>
                         </div>
 
-                        <h3 className="text-2xl font-bold text-purple-400 mb-2">
+                        <h3 className="text-2xl font-bold text-blue-400 mb-2">
                           {edu.degree}
                         </h3>
                         <div className="flex items-center gap-2 text-lg font-semibold text-slate-300 mb-2">
@@ -143,7 +143,7 @@ const Education = () => {
                               key={i}
                               className="text-slate-300 text-sm flex items-start"
                             >
-                              <span className="text-purple-400 mr-2">▹</span>
+                              <span className="text-blue-400 mr-2">▹</span>
                               <span>{highlight}</span>
                             </li>
                           ))}
