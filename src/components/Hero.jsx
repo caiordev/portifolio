@@ -40,7 +40,7 @@ const Hero = () => {
             <br />
             <span className="text-white">
               <TypingAnimation 
-                texts={['Full Stack Developer', 'Java Developer', 'React Developer', 'Problem Solver']}
+                texts={['Full Stack', 'Backend Java', 'React', 'Problem Solver']}
                 typingSpeed={100}
                 deletingSpeed={50}
                 pauseDuration={2000}

@@ -10,7 +10,7 @@ const FloatingTech = () => {
     { name: 'Docker', color: 'text-blue-400', delay: 2, x: 40, y: 30 },
     { name: 'PostgreSQL', color: 'text-blue-500', delay: 2.5, x: 60, y: 50 },
     { name: 'TypeScript', color: 'text-blue-400', delay: 3, x: 30, y: 80 },
-    { name: 'Node.js', color: 'text-green-500', delay: 3.5, x: 85, y: 40 },
+    { name: 'Linux', color: 'text-green-500', delay: 3.5, x: 85, y: 40 },
   ];
 
   return (
