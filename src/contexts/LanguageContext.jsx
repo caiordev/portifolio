@@ -126,7 +126,7 @@ const translations = {
     // About
     'about.subtitle2': 'Desenvolvedor apaixonado por tecnologia e inovação',
     'about.journeyTitle': 'Minha Jornada',
-    'about.journeyP1': 'Sou um desenvolvedor de software autodidata e entusiasta de tecnologia. Comecei minha jornada desenvolvendo projetos pessoais e explorando diferentes tecnologias.',
+    'about.journeyP1': 'Sou um desenvolvedor de software formado em engenharia da computação e entusiasta de tecnologia. Comecei minha jornada desenvolvendo projetos pessoais e explorando diferentes tecnologias.',
     'about.journeyP2': 'Durante minha carreira, participei de diversos projetos desafiadores que moldaram minha experiência profissional. Trabalhei com múltiplas stacks tecnológicas, desde desenvolvimento web até arquiteturas de microserviços.',
     'about.journeyP3': 'Hoje sou um desenvolvedor Full Stack capaz de trabalhar com múltiplas tecnologias, além de atuar em projetos freelance de construção de sistemas escaláveis e modernos.',
     'about.roleTitle': 'Full Stack Developer',
